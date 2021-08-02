@@ -31,10 +31,6 @@ contract SafeMath {
 }
 
 
-/**
-ERC Token Standard #20 Interface
-https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20-token-standard.md
-*/
 contract ERC20Interface {
     function totalSupply() public constant returns (uint);
     function balanceOf(address tokenOwner) public constant returns (uint balance);
@@ -73,9 +69,9 @@ contract IESCoin is ERC20Interface, SafeMath {
     // ------------------------------------------------------------------------
     constructor() public {
         symbol = "IES";
-        name = "IESCoin";
+        name = "IES Coin";
         decimals = 18;
-        _totalSupply = 50000000000;
+        _totalSupply = 50000000000000000000000000000;
         balances[0x38C72eDF4c1816Af3e00b35bB51914D795078Ccf] = _totalSupply;
         emit Transfer(address(0), 0x38C72eDF4c1816Af3e00b35bB51914D795078Ccf, _totalSupply);
     }
